@@ -1,0 +1,127 @@
+{
+  "experiment_1_stage1": {
+    "best_epoch": 5,
+    "reported_validation": {
+      "ROC_AUC": 0.9072,
+      "PR_AUC": 0.7396
+    },
+    "independent_validation_evaluation": {
+      "ROC_AUC": 0.8947,
+      "PR_AUC": 0.7273
+    }
+  },
+  "experiment_2_stage2_ewc": {
+    "lambda": 10,
+    "best_epoch": 3,
+    "validation": {
+      "ROC_AUC": 0.8919,
+      "PR_AUC": 0.6935
+    }
+  },
+  "experiment_3_forgetting": {
+    "stage1_before_exp2": {
+      "experience1": {
+        "ROC_AUC": 0.9982557,
+        "PR_AUC": 0.9923195
+      },
+      "experience2": {
+        "ROC_AUC": 0.9991481,
+        "PR_AUC": 0.9948215
+      }
+    },
+    "ewc_after_exp2": {
+      "experience1": {
+        "ROC_AUC": 0.9960754,
+        "PR_AUC": 0.9829227
+      },
+      "experience2": {
+        "ROC_AUC": 1,
+        "PR_AUC": 1
+      },
+      "experience1_auc_drop": 0.0021804
+    },
+    "no_ewc_after_exp2": {
+      "experience1": {
+        "ROC_AUC": 0.9986046,
+        "PR_AUC": 0.9922525
+      },
+      "experience2": {
+        "ROC_AUC": 1,
+        "PR_AUC": 1
+      },
+      "experience1_auc_drop": -0.0003489
+    },
+    "note": "Experience metrics are on experience subsets, not held-out validation data."
+  },
+  "experiment_4_fair_comparison": {
+    "no_EWC": {
+      "validation": {
+        "ROC_AUC": 0.8894682,
+        "PR_AUC": 0.6887392
+      }
+    },
+    "EWC": {
+      "lambda": 5,
+      "validation": {
+        "ROC_AUC": 0.8814738,
+        "PR_AUC": 0.671639
+      }
+    },
+    "note": "Matched initialization, split and 3 epochs."
+  },
+  "experiment_5_ewc_strength": {
+    "lambda_1": {
+      "validation": {
+        "ROC_AUC": 0.8693083,
+        "PR_AUC": 0.6658208
+      }
+    },
+    "lambda_50": {
+      "validation": {
+        "ROC_AUC": 0.8540146,
+        "PR_AUC": 0.6674191
+      }
+    },
+    "lambda_100": {
+      "validation": {
+        "ROC_AUC": 0.8561001,
+        "PR_AUC": 0.6185749
+      }
+    }
+  },
+  "experiment_6_learning_rate": {
+    "lr_1e_5": {
+      "validation": {
+        "ROC_AUC": 0.8957247,
+        "PR_AUC": 0.6958191
+      }
+    },
+    "lr_1e_4": {
+      "validation": {
+        "ROC_AUC": 0.8891206,
+        "PR_AUC": 0.7020444
+      }
+    },
+    "lr_3e_4": {
+      "validation": {
+        "ROC_AUC": 0.8839068,
+        "PR_AUC": 0.6695779
+      }
+    }
+  },
+  "interpretation": {
+    "best_validation_roc_auc_exp5_6": {
+      "learning_rate": 0.00001,
+      "value": 0.8957247
+    },
+    "best_validation_pr_auc_exp5_6": {
+      "learning_rate": 0.0001,
+      "value": 0.7020444
+    },
+    "caveats": [
+      "Experience-subset scores are not held-out generalization metrics.",
+      "Experiences are arbitrary halves of the same training cohort, not distinct tasks/modalities.",
+      "Reported EWC runs did not outperform the strongest low-learning-rate validation result."
+    ]
+  }
+}

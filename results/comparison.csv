@@ -1,0 +1,11 @@
+Experiment,Configuration,EWC_lambda,Validation_ROC_AUC,Validation_PR_AUC,Notes
+Experiment 1,Stage 1 baseline,,0.8947,0.7273,Independent validation evaluation
+Experiment 2,EWC lambda=10,10,0.8919,0.6935,Reported best validation epoch
+Experiment 4,No EWC,,0.8894682,0.6887392,Fair comparison
+Experiment 4,EWC,5,0.8814738,0.671639,Fair comparison
+Experiment 5,EWC lambda=1,1,0.8693083072645116,0.6658207565986067,
+Experiment 5,EWC lambda=50,50,0.854014598540146,0.6674190586578839,
+Experiment 5,EWC lambda=100,100,0.8561001042752867,0.6185748993357688,
+Experiment 6,LR=1e-5,,0.8957247132429614,0.6958191410945955,Best ROC-AUC
+Experiment 6,LR=1e-4,,0.889120611748349,0.702044389025214,Best PR-AUC
+Experiment 6,LR=3e-4,,0.883906847410497,0.6695778976439355,

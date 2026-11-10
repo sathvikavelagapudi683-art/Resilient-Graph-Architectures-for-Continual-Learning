@@ -1,0 +1,26 @@
+# Patient/genomic/clinical data — never commit to a public repository
+*.npz
+*.npy
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.joblib
+
+# Model outputs / checkpoints
+checkpoints/
+outputs/
+embeddings/
+predictions/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
